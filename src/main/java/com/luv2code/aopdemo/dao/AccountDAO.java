@@ -15,7 +15,12 @@ public class AccountDAO {
 
 
     // add new method: findAccounts()
-    public List<Account> findAccounts() {
+    public List<Account> findAccounts(boolean tripWire) {
+
+        if (tripWire) {
+            throw new RuntimeException("No soup for you!!!");
+        }
+
         return new ArrayList<>(Arrays.asList(
                 new Account("John", "Silver"),
                 new Account("Madhu", "Platinum"),
